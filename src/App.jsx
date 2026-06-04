@@ -204,16 +204,6 @@ const teamMembers = [
       "This role also supports trust through clear communication, transparent expectations, and consistent responsiveness.",
     ],
   },
-  {
-    name: "Alex, Raadin, David, Ruben",
-    role: "Race Department",
-    description: "Represents the performance edge and enthusiast energy inside the PENTAGON brand.",
-    delay: 160,
-    details: [
-      "The race department supports the long-term ambition of building performance credibility and motorsport-inspired brand identity.",
-      "It gives the company an enthusiast-facing edge while reinforcing technical seriousness across the broader dealership.",
-    ],
-  },
 ];
 
 const services = [
