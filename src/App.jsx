@@ -295,9 +295,9 @@ const cars = [
 ];
 
 const contactDetails = [
-  { label: "Launch Region", value: "Fort Lauderdale / Miami, Florida" },
-  { label: "Business Type", value: "Corporation with sales, service, financing, and inventory" },
-  { label: "Capital Plan", value: "$10,000,000 startup budget with reserve funding" },
+  { label: "Our location", value: "Fort Lauderdale / Miami, Florida" },
+  { label: "About our Business", value: "Corporation with sales, service, financing, and inventory" },
+  { label: "Capital", value: "$10,000,000 startup budget with reserve funding" },
 ];
 
 const serviceOptions = [
@@ -552,7 +552,6 @@ function App() {
           <div className="hero__backdrop"></div>
           <div className="hero__grid container">
             <div className="hero__content" data-reveal="">
-              <span className="eyebrow">Business plan</span>
               <h1 className="hero__title">
                 <span className="hero__brand">PENTAGON</span>
                 <span className="hero__headline">
