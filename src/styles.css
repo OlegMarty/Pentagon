@@ -274,7 +274,7 @@ button {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(2, 2, 2, 0.94) 0%, rgba(2, 2, 2, 0.65) 42%, rgba(2, 2, 2, 0.85) 100%),
-    url("/assets/images/business-plan/image2.png") center/cover no-repeat;
+    var(--hero-backdrop-image) center/cover no-repeat;
   opacity: 0.32;
   filter: saturate(1.08);
 }
@@ -624,6 +624,16 @@ button {
 
 #contact .section-heading h2 {
   max-width: 16ch;
+  font-size: clamp(2rem, 3.05vw, 2.95rem);
+  line-height: 1.02;
+}
+
+#cars .section-heading {
+  max-width: 1080px;
+}
+
+#cars .section-heading h2 {
+  max-width: 17ch;
   font-size: clamp(2rem, 3.05vw, 2.95rem);
   line-height: 1.02;
 }

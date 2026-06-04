@@ -9,6 +9,8 @@ const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const heroCopy =
   "PENTAGON is a Miami-area dealership concept built on affordability, fairness, and disciplined growth across sales, service, financing, and long-term customer care.";
 
@@ -64,7 +66,7 @@ const teamMembers = [
     description: "Sets the mission, growth direction, and leadership standards for the dealership.",
     photos: [
       {
-        src: "/assets/images/team-profiles/ceo.jpg",
+        src: asset("assets/images/team-profiles/ceo.jpg"),
         alt: "CEO department portrait",
       },
     ],
@@ -80,7 +82,7 @@ const teamMembers = [
     delay: 40,
     photos: [
       {
-        src: "/assets/images/team-profiles/administration.jpg",
+        src: asset("assets/images/team-profiles/administration.jpg"),
         alt: "Administration department portrait",
       },
     ],
@@ -96,7 +98,7 @@ const teamMembers = [
     delay: 80,
     photos: [
       {
-        src: "/assets/images/team-profiles/law.jpg",
+        src: asset("assets/images/team-profiles/law.jpg"),
         alt: "Law department portrait",
       },
     ],
@@ -112,11 +114,11 @@ const teamMembers = [
     delay: 120,
     photos: [
       {
-        src: "/assets/images/team-profiles/hr-1.jpg",
+        src: asset("assets/images/team-profiles/hr-1.jpg"),
         alt: "Human resources portrait one",
       },
       {
-        src: "/assets/images/team-profiles/hr-2.jpg",
+        src: asset("assets/images/team-profiles/hr-2.jpg"),
         alt: "Human resources portrait two",
       },
     ],
@@ -142,7 +144,7 @@ const teamMembers = [
     delay: 200,
     photos: [
       {
-        src: "/assets/images/team-profiles/warehouse.jpg",
+        src: asset("assets/images/team-profiles/warehouse.jpg"),
         alt: "Warehouse department portrait",
       },
     ],
@@ -167,7 +169,7 @@ const teamMembers = [
     delay: 40,
     photos: [
       {
-        src: "/assets/images/team-profiles/service.jpg",
+        src: asset("assets/images/team-profiles/service.jpg"),
         alt: "Service department portrait",
       },
     ],
@@ -183,7 +185,7 @@ const teamMembers = [
     delay: 80,
     photos: [
       {
-        src: "/assets/images/team-profiles/marketing.jpg",
+        src: asset("assets/images/team-profiles/marketing.jpg"),
         alt: "Marketing department portrait",
       },
     ],
@@ -253,7 +255,7 @@ const services = [
 const cars = [
   {
     name: "Entry & Premium Level",
-    image: "/assets/images/business-plan/image4.png",
+    image: asset("assets/images/business-plan/image4.png"),
     alt: "Floor plan showing the entry and premium showroom level",
     fit: "contain",
     description:
@@ -262,7 +264,7 @@ const cars = [
   },
   {
     name: "Basement Services Level",
-    image: "/assets/images/business-plan/image11.png",
+    image: asset("assets/images/business-plan/image11.png"),
     alt: "Floor plan showing the basement services level",
     fit: "contain",
     description:
@@ -272,7 +274,7 @@ const cars = [
   },
   {
     name: "Luxury Level",
-    image: "/assets/images/business-plan/image12.png",
+    image: asset("assets/images/business-plan/image12.png"),
     alt: "Floor plan showing the luxury showroom level",
     fit: "contain",
     description:
@@ -282,7 +284,7 @@ const cars = [
   },
   {
     name: "Site & Access",
-    image: "/assets/images/business-plan/image2.png",
+    image: asset("assets/images/business-plan/image2.png"),
     alt: "Aerial rendering of the dealership site in the Miami area",
     fit: "cover",
     description:
@@ -498,7 +500,7 @@ function App() {
         aria-hidden="true"
       >
         <div className="loader__glow"></div>
-        <img className="loader__mark" src="/assets/pentagon-mark.svg" alt="" />
+        <img className="loader__mark" src={asset("assets/pentagon-mark.svg")} alt="" />
         <p className="loader__text">PENTAGON</p>
       </div>
 
@@ -509,7 +511,7 @@ function App() {
       <header className="site-header" id="top">
         <div className="container header__inner">
           <a className="brand" href="#home" aria-label="PENTAGON home">
-            <img className="brand__mark" src="/assets/pentagon-mark.svg" alt="" />
+            <img className="brand__mark" src={asset("assets/pentagon-mark.svg")} alt="" />
             <span className="brand__text">PENTAGON</span>
           </a>
 
@@ -540,7 +542,13 @@ function App() {
       </header>
 
       <main>
-        <section className="hero" id="home">
+        <section
+          className="hero"
+          id="home"
+          style={{
+            "--hero-backdrop-image": `url(${asset("assets/images/business-plan/image2.png")})`,
+          }}
+        >
           <div className="hero__backdrop"></div>
           <div className="hero__grid container">
             <div className="hero__content" data-reveal="">
@@ -580,7 +588,7 @@ function App() {
               <div className="hero-card" data-parallax="">
                 <div className="hero-card__media">
                   <img
-                    src="/assets/images/business-plan/image2.png"
+                    src={asset("assets/images/business-plan/image2.png")}
                     alt="Aerial view of the planned dealership location in the Miami area"
                   />
                 </div>
@@ -648,7 +656,7 @@ function App() {
                 style={{ "--reveal-delay": "80ms" }}
               >
                 <img
-                  src="/assets/images/business-plan/image3.png"
+                  src={asset("assets/images/business-plan/image3.png")}
                   alt="Organizational chart showing the democratic leadership structure"
                 />
                 <div className="team-showcase__copy">
@@ -678,7 +686,7 @@ function App() {
 
             <div className="detail-banner glass-panel" data-reveal="">
               <img
-                src="/assets/images/business-plan/image1.png"
+                src={asset("assets/images/business-plan/image1.png")}
                 alt="Worker satisfaction analysis chart for the dealership company"
               />
               <div className="detail-banner__copy">
@@ -722,7 +730,7 @@ function App() {
                 </p>
               </div>
               <img
-                src="/assets/images/business-plan/image11.png"
+                src={asset("assets/images/business-plan/image11.png")}
                 alt="Floor plan showing the basement services level"
               />
             </div>
@@ -770,7 +778,7 @@ function App() {
 
             <div className="detail-banner glass-panel" data-reveal="">
               <img
-                src="/assets/images/business-plan/image12.png"
+                src={asset("assets/images/business-plan/image12.png")}
                 alt="Floor plan showing the luxury level layout"
               />
               <div className="detail-banner__copy">
