@@ -4,7 +4,7 @@ const navItems = [
   { id: "home", label: "Home" },
   { id: "team", label: "Team" },
   { id: "services", label: "Services" },
-  { id: "cars", label: "Car Details" },
+  { id: "cars", label: "Our Facility" },
   { id: "booking", label: "Booking" },
   { id: "contact", label: "Contact" },
 ];
@@ -288,6 +288,7 @@ const contactDetails = [
   { label: "Our location", value: "Fort Lauderdale / Miami, Florida" },
   { label: "About our Business", value: "Corporation with sales, service, financing, and inventory" },
   { label: "Capital", value: "$10,000,000 startup budget with reserve funding" },
+  { label: "Administrator phone", value: "+1 437 665 1488" },
 ];
 
 const serviceOptions = [
@@ -729,7 +730,7 @@ function App() {
         <section className="section" id="cars">
           <div className="container">
             <SectionHeading
-              eyebrow="Car Details"
+              eyebrow="Our Facility"
               title="The facility is organized around clear customer segments, service flow, and premium presentation."
             />
 
@@ -861,6 +862,9 @@ function App() {
               </p>
               <p>
                 Environmental responsibility, fair treatment, legal compliance, and disciplined budgeting are treated as operating requirements rather than optional branding language.
+              </p>
+              <p>
+                For more detailed guidance, the relevant department can provide specific information based on your request, whether it concerns sales, service, financing, administration, or operations.
               </p>
             </div>
 
