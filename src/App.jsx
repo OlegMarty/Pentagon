@@ -199,6 +199,12 @@ const teamMembers = [
     role: "Customer Service",
     description: "Owns first impressions, communication flow, and post-visit follow-up.",
     delay: 120,
+    photos: [
+      {
+        src: asset("assets/images/team-profiles/customer_service.jpg"),
+        alt: "Customer service department portrait",
+      },
+    ],
     details: [
       "Customer service welcomes visitors, understands needs, routes them to the right department, and follows up after visits.",
       "This role also supports trust through clear communication, transparent expectations, and consistent responsiveness.",
